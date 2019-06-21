@@ -15,7 +15,7 @@ class TabLink {
     } else {
       // else if `all` is false, only select the cards with matching this.tabData values
       this.cards = document.querySelectorAll(
-        `.card[data-tab='${this.tabData}]`
+        `.card[data-tab='${this.tabData}']`
       );
     }
 
@@ -49,11 +49,11 @@ class TabLink {
 class TabCard {
   constructor(cardElement) {
     // Assign this.cardElement to the cardElement DOM reference
-    // this.cardElement;
+    this.cardElement = cardElement;
   }
   selectCard() {
     // Update the style of this.cardElement to display = "flex"
-    // this.cardElement;
+    this.cardElement.style.display = "flex";
   }
 }
 
